@@ -1,0 +1,13 @@
+# Environment variables
+.env
+
+# Docker / local volumes (safety)
+dbdata/
+
+# PostgreSQL
+*.log
+
+# OS / editor noise
+.DS_Store
+.vscode/
+.idea/
