@@ -30,8 +30,18 @@ The schema separates products, stores, and time-stamped price observations to al
 - Shopping-list cost comparison across stores
 - Optimized with views and indexes
 
+
 ## Limitations
 
 - Products are assumed comparable across stores (brand and size differences ignored)
 - Discounts, loyalty pricing, and regional variation not modeled
 - Latest observed prices may not reflect availability at purchase time
+
+## Run Locally (Docker)
+
+The database can be run locally using Docker and initialized from a clean state.
+
+```bash
+cp .env.example .env
+docker compose up -d
+psql -h 127.0.0.1 -p 5433 -U postgres -d groceries -f setup.sql
